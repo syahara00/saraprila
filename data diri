@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Biodata diri</h1>
+    <p><strong>Nama: </strong>Syahara Aprilla</p>
+    <p><strong>Tempat, Tanggal Lahir: </strong>Medan, 18 April 2007</p>
+    <p><strong>Agama: </strong>Islam</p>
+    <p><strong>Prodi: </strong>Informatika</p>
+    <p><strong>Nim: </strong>2403310725</p>
+    <p><strong>kelas: </strong>IF C SIANG</p>
+    <p><strong>Email: </strong>syaharaaprilla1804@gamil.com</p>
+    <p><strong>No.HP: </strong>083191230917</p>
+</body>
+</html>
