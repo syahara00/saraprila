@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pengguna</title>
+</head>
+<body>
+    <th>
+        <img src="c:\Users\WIN11PC\OneDrive\画像\Screenshot\Cuplikan layar 2025-03-21 062807.png"
+         alt="universitas satya terra bhinneka logo"
+         >
+    </th>
+    <!-- Menu Navigasi -->
+    <h2>Menu Navigasi</h2>
+    <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Hubungi Kami</a></li>
+    </ul>
+
+    <!-- Formulir Pengguna -->
+    <h2>Formulir Pengguna</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Nama:</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Alamat:</td>
+                <td><textarea name="alamat" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="gender" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Usia:</td>
+                <td><input type="number" name="usia"></td>
+            </tr>
+            <tr>
+                <td>Hobi:</td>
+                <td>
+                    <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+                    <input type="checkbox" name="hobi" value="Musik"> Musik
+                    <input type="checkbox" name="hobi" value="Membaca"> Membaca
+                </td>
+            </tr>
+            <tr>
+                <td>Pilih Gambar:</td>
+                <td><input type="file" name="gambar"></td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir:</td>
+                <td><input type="date" name="tanggal_lahir"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
