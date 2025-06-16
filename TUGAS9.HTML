@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Konversi Bilangan</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fefefe;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      input,
+      button {
+        padding: 10px 15px;
+        font-size: 16px;
+        margin: 5px;
+      }
+
+      button {
+        background-color: #ddd;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #ccc;
+      }
+
+      /* Modal styling */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        background-color: #1e1e1e;
+        color: white;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        text-align: left;
+        min-width: 300px;
+      }
+
+      .modal button {
+        background-color: pink;
+        border-radius: 20px;
+        border: none;
+        padding: 8px 18px;
+        margin-top: 20px;
+        float: right;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Konversi Bilangan</h2>
+    <input
+      type="text"
+      id="inputDesimal"
+      placeholder="Masukkan Bilangan Desimal"
+    />
+    <button onclick="konversiBilangan()">Konversi</button>
+
+    <div class="modal" id="popup">
+      <div id="popupContent"></div>
+      <button onclick="tutupPopup()">OK</button>
+    </div>
+
+    <script>
+      function konversiBilangan() {
+        const input = document.getElementById("inputDesimal").value.trim();
+        const angka = parseInt(input);
+
+        let isiPopup = "";
+
+        if (isNaN(angka)) {
+          isiPopup = "Masukkan Angka yang benar!";
+        } else {
+          const biner = angka.toString(2);
+          const oktal = angka.toString(8);
+          const heksa = angka.toString(16).toUpperCase();
+
+          isiPopup = `
+                    <p>Biner : ${biner}</p>
+                    <p>Oktal : ${oktal}</p>
+                    <p>Heksadesimal : ${heksa}</p>
+                `;
+        }
+
+        document.getElementById("popupContent").innerHTML = isiPopup;
+        document.getElementById("popup").style.display = "block";
+      }
+
+      function tutupPopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
