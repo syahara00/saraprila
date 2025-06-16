@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoopla Movie</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: url("img/banner.jpg") no-repeat center center/cover;
+        color: white;
+        text-align: center;
+      }
+      .container {
+        padding-top: 150px;
+      }
+      h1 {
+        font-size: 48px;
+      }
+      .highlight {
+        color: orange;
+      }
+      p {
+        margin-top: -10px;
+        font-size: 18px;
+      }
+      .buttons {
+        margin-top: 30px;
+      }
+      .buttons button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        border: 2px solid white;
+        background: transparent;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 25px;
+      }
+      .buttons button:hover {
+        background: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        EXPLORER YOUR MOVIES <span id="tagline" class="highlight">ACTION</span>
+      </h1>
+      <p>
+        Streaming film dan acara TV tak terbatas di ponsel, tablet, laptop, dan
+        TV-mu.
+      </p>
+      <div class="buttons">
+        <button id="registerBtn">REGISTER</button>
+        <button id="loginBtn">LOGIN</button>
+      </div>
+    </div>
+
+    <script>
+      // Fitur 1: Alert saat klik
+      document
+        .getElementById("registerBtn")
+        .addEventListener("click", function () {
+          alert("Website Dalam Perbaikan");
+        });
+
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", function () {
+          alert("Website Dalam Perbaikan");
+        });
+
+      // Fitur 2: Ubah kata setiap 4 detik
+      const words = ["HORROR", "ACTION", "ROMANCE", "COMEDY"];
+      let index = 0;
+      const tagline = document.getElementById("tagline");
+
+      setInterval(() => {
+        index = (index + 1) % words.length;
+        tagline.textContent = words[index];
+      }, 4000);
+    </script>
+  </body>
+</html>
